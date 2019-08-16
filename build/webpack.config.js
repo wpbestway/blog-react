@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -10,7 +11,12 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    plugins: [
+      new TsconfigPathsPlugin({
+        configFile: path.join(__dirname, './../', 'tsconfig.json')
+      })
+    ]
   },
   module: {
     rules: [
@@ -20,7 +26,8 @@ module.exports = {
           {
             loader: 'awesome-typescript-loader',
             options: {
-
+              useCache: true,
+              cacheDirectory: path.join(__dirname, './../', '.cache-loader')
             }
           }
         ]
@@ -28,7 +35,30 @@ module.exports = {
       {
         test: /\.scss$/,
         include: [path.join(__dirname, './../', 'src')],
-        use: ['style.loader', 'css-loader', 'sass-loader']
+        use: [
+          'style-loader',
+          {
+            loader: 'cache-loader',
+            options: {
+              cacheDirectory: path.join(__dirname, './../', '.cache-loader')
+            }
+          },
+          {
+            loader: 'typings-for-css-modules-loader',
+            options: {
+              modules: true,
+              namedExport: true,
+              camelCase: true,
+              sass: true
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: [path.join(__dirname, './../', 'src/styles')]
+            }
+          }
+        ]
       }
     ]
   },

@@ -1,3 +1,6 @@
-html, body{
-  background: #fafafa;
+@import 'var.scss';
+
+.test{
+  font-size: 20px;
+  color: $red;
 }
