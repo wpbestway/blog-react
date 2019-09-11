@@ -1,0 +1,14 @@
+[2018-06-29T19:09:15.800] [INFO] cheese - 响应时间为：8560
+[2018-06-29T19:09:16.717] [INFO] cheese - 响应时间为：9478
+[2018-06-29T19:12:50.655] [INFO] cheese - 响应时间为：23227
+[2018-06-29T19:12:50.920] [INFO] cheese - 响应时间为：23492
+[2018-06-29T19:13:11.510] [INFO] cheese - 响应时间为：44082
+[2018-06-29T19:13:13.466] [INFO] cheese - 响应时间为：46038
+[2018-06-29T19:13:15.247] [INFO] cheese - 响应时间为：47819
+[2018-06-29T19:13:18.899] [INFO] cheese - 响应时间为：51471
+[2018-06-29T19:13:18.910] [ERROR] cheese - 已删除系列：5b361449848716570822f136
+[2018-06-29T19:13:18.910] [INFO] cheese - 响应时间为：51482
+[2018-06-29T19:15:01.322] [INFO] cheese - 响应时间为：5286
+[2018-06-29T19:15:01.769] [INFO] cheese - 响应时间为：5734
+[2018-06-29T19:23:41.549] [INFO] cheese - {"method":"POST","url":"/admin/user/login","host":"localhost:4000","message":{"message":"响应时间为：322"},"referer":"http://localhost:4001/","userAgent":"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"}
+[2018-06-29T19:23:41.576] [INFO] cheese - {"method":"GET","url":"/admin/user/info","host":"localhost:4000","message":{"message":"响应时间为：348"},"referer":"http://localhost:4001/","userAgent":"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"}
